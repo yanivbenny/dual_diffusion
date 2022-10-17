@@ -24,13 +24,13 @@ To plot losses:
 
 `> python src/plot_losses.py --config config/cifar10_train.yaml --model_paths <MODEL_PATH>`
 
-Where <MODEL_PATHS> can be one or more paths to pretrained models.
+Where \<MODEL_PATHS\> can be one or more paths to pretrained models.
 
 To compute FID:
 
 `> python src/compute_fid.py --model_path <MODEL_PATH> --num_timesteps <N>`  
 
-Where <MODEL_PATH> is a path to one pretrained model and <N> is the number of denoising steps.
+Where \<MODEL_PATH\> is a path to one pretrained model and \<N\> is the number of denoising steps.
 
 ## Citation
 We thank you for showing interest in our work. 
