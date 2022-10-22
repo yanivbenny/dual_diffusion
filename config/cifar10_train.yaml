@@ -14,7 +14,7 @@ model:
     attn_strides: [2]
     mean_type: dualx
     var_type: fixedlarge
-    is_implicit: false
+    is_implicit: True
     dropout: 0.1
     fold: 1
     schedule:
@@ -36,7 +36,7 @@ training:
         lr: 2.e-4
         wd: 0.0
     dataloader:
-        batch_size: 64
+        batch_size: 128
         num_workers: 8
     accumulate_grad_batches: 1
 
