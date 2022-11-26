@@ -3,6 +3,7 @@ import math
 from copy import deepcopy
 
 import torch
+from omegaconf import OmegaConf
 from tqdm import tqdm
 
 from src.ddpm import DDPM
@@ -52,6 +53,8 @@ if __name__ == "__main__":
 
     # Parse arguments
     args = parser.parse_args()
+
+    OmegaConf.register_new_resolver("out_channels", lambda x: 7 if x == "dualx" else 3)
 
     # Load model
     print("Loading model...")

@@ -49,6 +49,7 @@ def main():
     OmegaConf.register_new_resolver("out_channels", lambda x: 7 if x == "dualx" else 3)
 
     conf = OmegaConf.create(conf, flags={"struct": True})
+    OmegaConf.resolve(conf)
 
     # Update config with parser
     argv_conf = OmegaConf.from_dotlist(argv)
